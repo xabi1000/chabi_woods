@@ -1,0 +1,16 @@
+@use 'mixins' as *;
+
+body{
+   min-height: 100vh;
+   background-color: #333;
+   color:  #05b28b;
+   font-family: 'Open Sans', sans-serif;
+   scroll-behavior: smooth;
+   
+   @include tablet{
+      display: grid;
+      grid-template-columns: 15% 85%;
+      grid-template-rows: 55px 1fr;
+
+   }
+}

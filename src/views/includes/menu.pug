@@ -1,0 +1,9 @@
+nav.menu
+
+   ul.menu__main 
+      each page, index in pages
+         li.menu__item
+            if index === 0
+               a(href=`index.html`).menu__link= page.charAt(0).toUpperCase() + page.slice(1)
+            else 
+               a(href=`/${page}.html`).menu__link= page.charAt(0).toUpperCase() + page.slice(1)
