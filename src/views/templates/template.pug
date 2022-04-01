@@ -1,33 +1,16 @@
 include ../config/vars
 doctype html
-html(lang="en")
-   head
-      meta(charset="UTF-8")
-      meta(http-equiv="X-UA-Compatible", content="IE=edge")
-      meta(name="viewport", content="width=device-width, initial-scale=1.0")
-      title Chabi Woods
-      link(rel="stylesheet", href="./css/styles.css")
-   body 
-      header.header
-         .logo
-            img(src="./assets/favicons/logo.svg" alt="logo factory")
-         .topBar
-            .topBar__icon
-               img(src="assets/favicons/user.svg", alt="icon user" class='icon__topBar')
-               span Sign in
-            .topBar__icon     
-               img(src="assets/favicons/user-add.svg", alt="icon user add" class='icon__topBar')
-               span Sign up
-         .toggle-menu#toggle-menu
-            .first-bar 
-            .second-bar
-            .third-bar
-      .side-bar#side-bar  
-         h2.side-bar__title CHABI
-            br 
-            |WOODS
-         block menu
-      main.main
-
-
-      script(src="js/scripts.min.js")    
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Chabi Woods
+		link(rel='stylesheet', href='./css/styles.css')
+	body 
+		include ../includes/header
+		main.main
+			block main
+		footer.footer 
+			block footer
+		script(src='js/scripts.min.js') 

@@ -1,24 +1,25 @@
-@use "mixins" as *;
+@use 'mixins' as *;
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 65px;
-    position: fixed;
-    top: 0;
-    padding: 0.5rem;
-    background-color: #444;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: 65px;
+	position: fixed;
+	top: 0;
+	padding: 0.5rem;
+	background-color: var(--bgc-grayLight);
 
-    @include tablet {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        justify-content: flex-end;
-        width: 100%;
-        width: calc(100% - 15%);
-        right: 0;
-        padding: 0 11px 0 0;
-        z-index: 100;
-    }
+	@include tablet {
+		grid-column: 2/3;
+		grid-row: 1/2;
+		justify-content: flex-end;
+		width: 100%;
+		width: calc(100% - 15%);
+		right: 0;
+		padding: 0 11px 0 0;
+		z-index: 100;
+		display: none;
+	}
 }

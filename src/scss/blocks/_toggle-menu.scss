@@ -1,31 +1,31 @@
-@use "mixins" as *;
+@use 'mixins' as *;
 
 .toggle-menu {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 9px;
-    width: 33px;
-    height: 33px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 9px;
+	width: 33px;
+	height: 33px;
+	transform: rotate(0deg);
+	transition: transform 0.9s ease-in-out;
 
-    & .first-bar,
-    & .second-bar,
-    & .third-bar {
-        width: 33px;
-        height: 3px;
-        background-color: sandybrown;
-        border-radius: 15px;
-        transform: rotate(0deg);
-        transition: transform .9s ease-in-out;
-        
-        &.active {
-            transform: rotate(45deg);
-            transition: transform .9s ease-in-out;
-        }
-    }
+	&.active {
+		transform: rotate(90deg);
+		transition: transform 0.9s ease-in-out;
+	}
 
-    @include tablet {
-        display: none;
-    }
+	& .first-bar,
+	& .second-bar,
+	& .third-bar {
+		width: 33px;
+		height: 3px;
+		background-color: var(--bgc-barMenu);
+		border-radius: 15px;
+	}
+
+	@include tablet {
+		display: none;
+	}
 }

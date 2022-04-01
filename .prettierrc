@@ -1,0 +1,14 @@
+{
+	"useTabs": true,
+	"tabSize": 2,
+	"singleQuote": true,
+	"overrides": [
+		{
+			"files": "*.pug",
+			"options": {
+				"parser": "pug",
+				"singleQuote": true
+			}
+		}
+	]
+}
