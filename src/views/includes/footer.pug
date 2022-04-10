@@ -1,0 +1,42 @@
+footer.footer 
+	.footer__up 
+		.logoName
+			img(src='./assets/favicons/logo.svg', alt='logo of the society')
+			h4.footer__titel CHABI WOODS
+		.description
+			p.footer__text Lorem ipsum dolor sit amet cotetur adipisg.
+		ul.socialMedia.footer__list
+			li.footer__icon-container
+				a(
+					href='https://www.facebook.com/AnDaLuS1000',
+					target='_blank',
+					rel='noopener noreferrer'
+				)
+					img(src='./assets/favicons/facebook.svg', alt='logo of facebook')
+			li.footer__icon-container
+				a(
+					href='https://www.instagram.com/chabiwoods/',
+					target='_blank',
+					rel='noopener noreferrer'
+				)
+					img(src='./assets/favicons/instagram.svg', alt='logo of instagram')
+			li.footer__icon-container
+				a(
+					href='https://www.twitter.com/chabiwoods/',
+					target='_blank',
+					rel='noopener noreferrer'
+				)
+					img(src='./assets/favicons/twitter.svg', alt='logo of twitter')
+
+	.footer__down 
+		.left
+			i.footer__copyright &copy; Chabi Woods 2022 &nbsp;
+			a.dev(href='#', target='_blank', rel='noopener noreferrer') developed by: "ibraCode"
+		.right
+			ul.right__menu.footer__list
+				each page, index in pages
+					li
+						if index === 0
+							a(href='index.html')= page.charAt(0).toUpperCase() + page.slice(1)
+						else
+							a(href=`/${page}.html`)= page.charAt(0).toUpperCase() + page.slice(1)

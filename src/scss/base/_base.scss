@@ -1,16 +1,16 @@
-@use "config" as *;
-@use "mixins" as *;
+@use 'config' as *;
+@use 'mixins' as *;
 
 body {
-    min-height: 100vh;
-    background-color: var(--bgc-grayDark);
-    color: var(--text-color);
-    font-family: font-text, serif;
-    scroll-behavior: smooth;
+	min-height: 100vh;
+	background-color: var(--bgc-grayDark);
+	color: var(--text-color);
+	font-family: font-text, serif;
+	scroll-behavior: smooth;
+	position: relative;
 
-    @include tablet {
-        display: grid;
-        grid-template-columns: 15% 85%;
-        grid-template-rows: 55px 1fr;
-    }
+	@include tablet {
+		display: grid;
+		grid-template-columns: 21% 79%;
+	}
 }

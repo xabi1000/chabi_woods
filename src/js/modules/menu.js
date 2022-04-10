@@ -5,8 +5,11 @@ const $sideBar = document.getElementById('side-bar');
 const menu = () => {
 	document.addEventListener('click', (e) => {
 		if (e.target.closest('#toggle-menu')) {
+			console.log('click');
 			$toggleMenu.classList.toggle('active');
 			$sideBar.classList.toggle('active');
+		} else {
+			console.log(e.target);
 		}
 	});
 };

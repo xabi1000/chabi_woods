@@ -1,0 +1,81 @@
+@use 'mixins' as *;
+@use 'config' as *;
+
+$gap: 23px;
+$gap-icons: 11px;
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--bgc-grayLight);
+	position: absolute;
+	inset: auto 0 0 0;
+	width: 100%;
+	height: auto;
+	font-size: 0.7rem;
+
+	@include tablet {
+		grid-column: 2/3;
+	}
+
+	& img {
+		width: 25px;
+	}
+
+	&__list {
+		@include reset-list();
+		display: flex;
+		gap: $gap-icons;
+	}
+
+	&__up {
+		padding: 0.5rem 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		& .logoName {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: $gap;
+
+			& h4 {
+				margin: 0;
+				font-family: title, sans-serif;
+			}
+
+			& img {
+				width: 15px;
+			}
+		}
+
+		& .socialMedia {
+			justify-content: center;
+			gap: $gap;
+		}
+	}
+
+	&__down {
+		border-top: 2px solid var(--text-color);
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: $gap-icons;
+
+		@include tablet {
+			flex-direction: row;
+			height: 35px;
+			justify-content: space-around;
+			background-color: black;
+			align-items: center;
+		}
+
+		& .right .right__menu {
+			justify-content: flex-end;
+		}
+	}
+}
